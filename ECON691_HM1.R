@@ -24,7 +24,11 @@ acs <- get_acs(geography = "county", #Defines geography level of data
                geometry = TRUE)     #downloads the TIGER shapefile data
 
 
+<<<<<<< HEAD
 #state code for Idiana, Ohio, Kentucky, and Tennessee is 18,39,21, and 47,respectively.
+=======
+#state code for Idiana,Ohio,Kentucky, and Tennessee is 18,39,21, and 47,respectively.
+>>>>>>> fd88b55484b3e6902c5f7a0b5f51491a772494be
 
 core <- acs %>% #this helps to clean the data
   select(-moe) %>%
@@ -43,6 +47,7 @@ core <- acs %>% #this helps to clean the data
   
 #for summary, use the command: summary(core)
 
+<<<<<<< HEAD
 ggplot(core) +
   geom_sf(aes(fill = Afford)) #visualizes the afford variable
 
@@ -51,8 +56,23 @@ ggplot(core) +
   geom_sf(aes(fill=Affordable)) + #visualizes the affordable variable
   scale_fill_gradient2()+
   theme_bw()
+=======
+#ggplot(core) +
+ # geom_sf(aes(fill = Afford)) #visualizes the afford variable
+
+
+#ggplot(core) +
+ # geom_sf(aes(fill=Affordable)) + #visualizes the affordable variable
+#scale_fill_gradient2()+
+ # theme_bw()
+>>>>>>> fd88b55484b3e6902c5f7a0b5f51491a772494be
 
 ggplot(core) +
  geom_sf(aes(fill=Med_Inc + Med_Rent))  #visualizes the affordable variable by filling with Median Income and Median Rent.
  
+<<<<<<< HEAD
 
+=======
+#ggplot(core) +
+ # geom_sf(aes(fill=Med_Rent))
+>>>>>>> fd88b55484b3e6902c5f7a0b5f51491a772494be
