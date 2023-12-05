@@ -150,7 +150,7 @@ writeLines(latex_table, "regression_models_table.latex")
 
 browseURL("regression_models_table.latex")
 
-#stargazer(core,CORE, type = "latex", title = "Table 1 = Summary statistics", out="table.latex")
+
 
 
 #HTML Format:
@@ -165,4 +165,121 @@ writeLines(html_table, "regression_models_table.html")
 
 browseURL("regression_models_table.html")
 
-#stargazer(core,CORE, type = "html", title = "Table 1 = Summary statistics", out="table.html")
+
+
+
+
+#For the Last Part, I want to also create 6 tables; one for each model.
+
+#LATEX FORMAT
+
+#LaTeX format for Model 1
+latex_table <- stargazer(mod1, title = "Regression Model 1", align = TRUE, type = "latex")
+
+cat(latex_table, sep = "\n")
+
+writeLines(latex_table, "regression_model1_table.latex")
+
+browseURL("regression_model1_table.latex")
+
+#LaTeX format for Model 2
+latex_table <- stargazer(mod2, title = "Regression Model 2", align = TRUE, type = "latex")
+
+cat(latex_table, sep = "\n")
+
+writeLines(latex_table, "regression_model2_table.latex")
+
+browseURL("regression_model2_table.latex")
+
+#LaTeX format for Model 3.1
+latex_table <- stargazer(mod3.1, title = "Regression Model 3", align = TRUE, type = "latex")
+
+cat(latex_table, sep = "\n")
+
+writeLines(latex_table, "regression_model3_table.latex")
+
+browseURL("regression_model3_table.latex")
+
+#LaTeX format for Model 3.2
+latex_table <- stargazer(mod3.2, title = "Regression Model 4", align = TRUE, type = "latex")
+
+cat(latex_table, sep = "\n")
+
+writeLines(latex_table, "regression_model4_table.latex")
+
+browseURL("regression_model4_table.latex")
+
+#LaTeX format for Model 4.1
+latex_table <- stargazer(mod4.1, title = "Regression Model 5", align = TRUE, type = "latex")
+
+cat(latex_table, sep = "\n")
+
+writeLines(latex_table, "regression_model5_table.latex")
+
+browseURL("regression_model5_table.latex")
+
+#LaTeX format for Model 4.2
+latex_table <- stargazer(mod4.2, title = "Regression Model 6", align = TRUE, type = "latex")
+
+cat(latex_table, sep = "\n")
+
+writeLines(latex_table, "regression_model6_table.latex")
+
+browseURL("regression_model6_table.latex")
+
+
+#HTML FORMAT
+
+#Html Format for Model 1
+html_table <- stargazer(mod1, title = "Regression Model 1", align = TRUE, type = "html")
+
+cat(html_table, sep = "\n")
+
+writeLines(html_table, "regression_model1_table.html")
+
+browseURL("regression_model1_table.html")
+
+#Html format for Model 2
+html_table <- stargazer(mod2, title = "Regression Model 2", align = TRUE, type = "html")
+
+cat(html_table, sep = "\n")
+
+writeLines(html_table, "regression_model2_table.html")
+
+browseURL("regression_model2_table.html")
+
+#Html format for Model 3.1
+html_table <- stargazer(mod3.1, title = "Regression Model 3", align = TRUE, type = "html")
+
+cat(html_table, sep = "\n")
+
+writeLines(html_table, "regression_model3_table.html")
+
+browseURL("regression_model3_table.html")
+
+#Html format for Model 3.2
+html_table <- stargazer(mod3.2, title = "Regression Model 4", align = TRUE, type = "html")
+
+cat(html_table, sep = "\n")
+
+writeLines(html_table, "regression_model4_table.html")
+
+browseURL("regression_model4_table.html")
+
+#Html format for Model 4.1
+html_table <- stargazer(mod4.1, title = "Regression Model 5", align = TRUE, type = "html")
+
+cat(html_table, sep = "\n")
+
+writeLines(html_table, "regression_model5_table.html")
+
+browseURL("regression_model5_table.html")
+
+#Html format for Model 4.2
+html_table <- stargazer(mod4.2, title = "Regression Model 6", align = TRUE, type = "html")
+
+cat(html_table, sep = "\n")
+
+writeLines(html_table, "regression_model6_table.html")
+
+browseURL("regression_model6_table.html")
