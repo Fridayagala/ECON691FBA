@@ -25,7 +25,7 @@ acs <- get_acs(geography = "county",           #Defines geography level of data
                geometry = TRUE)                #Downloads the TIGER shapefile data
 
 
-#state code for Idiana, Ohio, Kentucky, and Tennessee is 18,39,21, and 47,respectively.
+#state code for Indiana, Ohio, Kentucky, and Tennessee is 18,39,21, and 47,respectively.
 
 core <- acs %>%                                                #This line of codes helps to clean the data
   select(-moe) %>%
@@ -54,7 +54,7 @@ ggplot(core) +
 ggplot(core) +
   geom_sf(aes(fill=Affordable)) + 
   scale_fill_gradient2()+
-  theme_bw()
+  theme_bw()  #This is the one I wanted to see.
 
 #The third code visualizes the affordable variable by filling with Median Income for the four states.
 
