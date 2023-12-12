@@ -117,7 +117,7 @@ vis <- acs %>%
   select(GEOID, geometry) %>%
   distinct() %>%
   left_join(., temp, by="GEOID") %>%
-  mutate(est = x * mod2a$coefficients[5])
+  mutate(est = x * mod2$coefficients[5])   #I suspect this is a remnent from the original code?
 
 ggplot(vis) + 
   geom_sf(aes(fill=est)) +
